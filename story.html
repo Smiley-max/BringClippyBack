@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Will you hear my story?</title>
+  <style>
+    body, html {
+      margin: 0; padding: 0;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #121212;
+      color: white;
+      user-select: none;
+      text-align: center;
+      padding: 20px;
+    }
+
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 40px;
+      text-shadow: 0 0 8px rgba(0,0,0,0.7);
+    }
+
+    .buttons, #done-btn-container {
+      display: flex;
+      gap: 30px;
+    }
+
+    button {
+      padding: 15px 40px;
+      font-size: 1.6rem;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      font-weight: bold;
+      box-shadow: 0 5px 10px rgba(0,0,0,0.7);
+      transition: background-color 0.3s ease, transform 0.2s ease;
+      user-select: none;
+    }
+
+    button.yes {
+      background-color: #4CAF50;
+      color: white;
+    }
+    button.yes:hover {
+      background-color: #45a049;
+      transform: scale(1.1);
+    }
+
+    button.no {
+      background-color: #f44336;
+      color: white;
+    }
+    button.no:hover {
+      background-color: #da190b;
+      transform: scale(1.1);
+    }
+
+    button.done {
+      background-color: #2196F3;
+      color: white;
+      padding: 12px 36px;
+      font-size: 1.6rem;
+      border-radius: 10px;
+      box-shadow: 0 5px 10px rgba(0,0,0,0.7);
+    }
+    button.done:hover {
+      background-color: #1976d2;
+      transform: scale(1.1);
+    }
+
+    iframe {
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.8);
+      max-width: 90vw;
+      max-height: 50vh;
+    }
+  </style>
+</head>
+<body>
+
+  <h1 id="question-text">Will you hear my story?</h1>
+
+  <div class="buttons" id="yes-no-buttons">
+    <button class="yes" onclick="showStory()">Yes</button>
+    <button class="no" onclick="location.href='me.html'">No</button>
+  </div>
+
+  <div id="story-container" style="display:none; flex-direction: column; align-items: center; gap: 20px;">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/3kcQzCzSDvc?si=LJXX7hlPrC7JLP3T" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <div id="done-btn-container">
+      <button class="done" onclick="location.href='me.html'">Done</button>
+    </div>
+  </div>
+
+  <script>
+    function showStory() {
+      // Skjul spørgsmål og knapper
+      document.getElementById('question-text').style.display = 'none';
+      document.getElementById('yes-no-buttons').style.display = 'none';
+
+      // Vis video og done-knap
+      document.getElementById('story-container').style.display = 'flex';
+    }
+  </script>
+
+</body>
+</html>
