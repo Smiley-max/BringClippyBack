@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Do you love me?!</title>
+  <style>
+    /* Baggrund med fuld skærm */
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      width: 100%;
+      overflow: hidden;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: url('clippycoolminecraft.png') no-repeat center center fixed;
+      background-size: cover;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      text-shadow: 0 0 10px rgba(0,0,0,0.7);
+      user-select: none;
+    }
+
+    h1 {
+      font-size: 4rem;
+      margin-bottom: 40px;
+      text-align: center;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 30px;
+    }
+
+    button {
+      padding: 15px 40px;
+      font-size: 1.8rem;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      font-weight: bold;
+      box-shadow: 0 5px 10px rgba(0,0,0,0.5);
+      transition: transform 0.2s ease, background-color 0.3s ease;
+      user-select: none;
+    }
+
+    button.yes {
+      background-color: #4CAF50;
+      color: white;
+    }
+    button.yes:hover {
+      background-color: #45a049;
+      transform: scale(1.1);
+    }
+
+    button.no {
+      background-color: #f44336;
+      color: white;
+    }
+    button.no:hover {
+      background-color: #da190b;
+      transform: scale(1.1);
+    }
+  </style>
+</head>
+<body>
+  <h1>Do you love me?!</h1>
+  <div class="buttons">
+    <button class="yes" onclick="alert('Yay! Smiley-Max loves you too! 😄')">Yes</button>
+    <button class="no" onclick="handleNo()">No</button>
+  </div>
+
+  <script>
+    function handleNo() {
+      // Prøv at lukke fanen - virker ikke altid i alle browsere
+      alert('Oh no! You will be redirected away...');
+      // Prøv at lukke vinduet
+      window.open('', '_self').close();
+
+      // Hvis vinduet ikke lukker, send til en anden side (f.eks. google)
+      setTimeout(() => {
+        window.location.href = 'https://www.google.com';
+      }, 1000);
+    }
+  </script>
+</body>
+</html>
