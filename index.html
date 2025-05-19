@@ -5,19 +5,30 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>miss me?</title>
   <style>
-    /* Gør body og html til 100% højde */
     html, body {
       height: 100%;
       margin: 0;
       overflow: hidden;
-    }
-    /* Baggrund med gif over hele siden */
-    body {
       background: url('clippycute.gif') no-repeat center center fixed;
       background-size: cover;
+      position: relative;
+      font-family: Arial, sans-serif;
+    }
+    /* Tekst i bunden */
+    .bottom-text {
+      position: fixed;
+      bottom: 20px;
+      width: 100%;
+      text-align: center;
+      color: white;
+      font-size: 2rem;
+      text-shadow: 0 0 5px rgba(0,0,0,0.7);
+      user-select: none;
     }
   </style>
 </head>
 <body>
+  <div class="bottom-text">Miss me?</div>
 </body>
 </html>
+
