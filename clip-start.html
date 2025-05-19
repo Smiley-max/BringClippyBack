@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Clippy's Life Timeline</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f0f4f8;
+      margin: 0;
+      padding: 20px 20px 80px; /* ekstra plads nederst til knappen */
+      color: #333;
+      position: relative;
+      min-height: 100vh;
+      box-sizing: border-box;
+    }
+    h1 {
+      text-align: center;
+      margin-bottom: 40px;
+      color: #2c3e50;
+    }
+    .timeline {
+      position: relative;
+      max-width: 600px;
+      margin: 0 auto;
+      padding-left: 40px;
+      border-left: 3px solid #ff4081;
+    }
+    .event {
+      position: relative;
+      margin-bottom: 30px;
+      padding-left: 20px;
+    }
+    .event::before {
+      content: "";
+      position: absolute;
+      left: -12px;
+      top: 5px;
+      width: 20px;
+      height: 20px;
+      background-color: #ff4081;
+      border-radius: 50%;
+      border: 3px solid white;
+      box-shadow: 0 0 5px rgba(255, 64, 129, 0.5);
+    }
+    .event .year {
+      font-weight: bold;
+      color: #e91e63;
+      font-size: 1.2rem;
+      margin-bottom: 5px;
+    }
+    .event .description {
+      font-size: 1rem;
+      line-height: 1.4;
+      color: #555;
+    }
+    /* Knap container fast i bunden */
+    .button-container {
+      position: fixed;
+      bottom: 20px;
+      width: 100%;
+      text-align: center;
+      left: 0;
+    }
+    button {
+      padding: 12px 30px;
+      font-size: 1.2rem;
+      border: none;
+      border-radius: 8px;
+      background-color: #ff4081;
+      color: white;
+      cursor: pointer;
+      box-shadow: 0 4px 8px rgba(255, 64, 129, 0.6);
+      transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+    button:hover {
+      background-color: #e73370;
+      transform: scale(1.05);
+    }
+    button:active {
+      transform: scale(0.95);
+    }
+    /* Responsive */
+    @media (max-width: 650px) {
+      .timeline {
+        max-width: 100%;
+        padding-left: 30px;
+      }
+      .event {
+        padding-left: 15px;
+      }
+      .event::before {
+        left: -10px;
+        width: 16px;
+        height: 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>Clippy's Life Timeline</h1>
+  <div class="timeline">
+    <div class="event">
+      <div class="year">1996</div>
+      <div class="description">
+        Clippy is introduced as Microsoft Office Assistant, helping users with tips and tricks.
+      </div>
+    </div>
+    <div class="event">
+      <div class="year">1997</div>
+      <div class="description">
+        Clippy becomes famous (or infamous) for being both helpful and a bit annoying.
+      </div>
+    </div>
+    <div class="event">
+      <div class="year">2001</div>
+      <div class="description">
+        Microsoft gradually phases out Clippy in Office XP due to mixed user feedback.
+      </div>
+    </div>
+    <div class="event">
+      <div class="year">2019</div>
+      <div class="description">
+        Clippy makes a nostalgic comeback in Microsoft Teams as an emoji and sticker.
+      </div>
+    </div>
+    <div class="event">
+      <div class="year">2025</div>
+      <div class="description">
+        Clippy lives on forever in the hearts of fans like Smiley-Max! 🎉
+      </div>
+    </div>
+  </div>
+  
+  <div class="button-container">
+    <button onclick="alert('Ready for the next adventure?')">Come with me!</button>
+  </div>
+</body>
+</html>
