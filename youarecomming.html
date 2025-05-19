@@ -69,18 +69,14 @@
 <body>
   <h1>Do you love me?!</h1>
   <div class="buttons">
-    <button class="yes" onclick="alert('Yay! Smiley-Max loves you too! 😄')">Yes</button>
+    <button class="yes" onclick="location.href='story.html'">Yes</button>
     <button class="no" onclick="handleNo()">No</button>
   </div>
 
   <script>
     function handleNo() {
-      // Prøv at lukke fanen - virker ikke altid i alle browsere
       alert('Oh no! You will be redirected away...');
-      // Prøv at lukke vinduet
       window.open('', '_self').close();
-
-      // Hvis vinduet ikke lukker, send til en anden side (f.eks. google)
       setTimeout(() => {
         window.location.href = 'https://www.google.com';
       }, 1000);
