@@ -9,7 +9,7 @@
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       background: #f0f4f8;
       margin: 0;
-      padding: 20px 20px 80px; /* ekstra plads nederst til knappen */
+      padding: 20px 20px 80px;
       color: #333;
       position: relative;
       min-height: 100vh;
@@ -55,7 +55,6 @@
       line-height: 1.4;
       color: #555;
     }
-    /* Knap container fast i bunden */
     .button-container {
       position: fixed;
       bottom: 20px;
@@ -81,7 +80,6 @@
     button:active {
       transform: scale(0.95);
     }
-    /* Responsive */
     @media (max-width: 650px) {
       .timeline {
         max-width: 100%;
@@ -134,7 +132,7 @@
   </div>
   
   <div class="button-container">
-    <button onclick="alert('Ready for the next adventure?')">Come with me!</button>
+    <button onclick="location.href='youarecomming.html'">Come with me!</button>
   </div>
 </body>
 </html>
